@@ -1,3 +1,7 @@
+// start
+const start = document.getElementById("start")
+console.log(start);
+
 // highscores
 var highscoresEl = document.querySelector("#highscore");
 var storagedUsers = [];
@@ -14,5 +18,10 @@ if (storagedUsers) {
     }
 }
 
-const start = document.getElementById("start")
-console.log(start);
+clearButtonEl.addEventListener("click",clearButtonEl)
+
+function ClearScore() {
+    localStorage.clear();
+    highscoresEl.innerHTML = '';
+}
+
